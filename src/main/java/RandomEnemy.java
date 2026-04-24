@@ -1,10 +1,21 @@
-public class RandomEnemy extends Character{
-    //need to update with differnt character types so enemeies are not just all the same
-    public RandomEnemy(Weapon weapons, Armor armors, String names) {
-        super((int) (Math.random() * 11) + 20,   // 20–30 health
-                (int) (Math.random() * 6) + 5,     // 5–10 mana
-                weapons, armors, names, //supers these
-                1, //1 inventory
-                (int) (Math.random() * 10) + 1); // 1-10 speed
+public class RandomEnemy{
+    private int characterType;
+    public RandomEnemy() {
+        characterType=(int)(Math.random()*(2-0+1)+0);
+    }
+
+    public int getCharacterType(){
+        return characterType;
+    }
+
+    public Character makeRandomCharacter(int type){
+        if(type==0){
+            return new BeastTamer(new Weapon(0,0) ,new Armor(15,10) ,"Steve" ,5 ,2);
+        } else if (type==1) {
+            return new BallerBrawler("Steve");
+        }else{
+            return new Wizard(new Wand(),new Armor(5,5),"Steve");
+        }
     }
 }
+

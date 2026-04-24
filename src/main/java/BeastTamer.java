@@ -4,8 +4,8 @@ public class BeastTamer extends Character{
     private String[] beasts;
     private String beastUsed;
     private boolean IsMeatEater;
-    public BeastTamer(int health, int magic, Weapon weapon, Armor armor, String name, int max, int initiative) {
-        super(health, magic, weapon, armor, name, max, initiative);
+    public BeastTamer(Weapon weapon, Armor armor, String name, int max, int initiative) {
+        super(50, 0, weapon, armor, name, max, initiative);
         BeastType=(int)(Math.random()*(3-0+1)+0);
         beasts=new String[]{"Rats","Dinosaur","Pandas","Fish"};
         beastUsed=beasts[BeastType];
