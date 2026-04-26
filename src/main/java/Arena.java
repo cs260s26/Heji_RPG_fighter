@@ -3,11 +3,12 @@ public class Arena {
         Character p1;
         Character p2;
         boolean fightOver = false;
-        Weapon sword = new Weapon(5, 0);
-        Weapon axe = new Weapon (3, 0);
-        Armor basicArmor = new Armor(3, 2);
-        Character contender1 = new SampleCharacter(sword, basicArmor, "John");
-        Character contender2 = new RandomEnemy(axe, basicArmor, "Bob");
+//        Weapon sword = new Weapon(5, 0);
+//        Weapon axe = new Weapon (3, 0);
+//        Armor basicArmor = new Armor(3, 2);
+        RandomEnemy rand= new RandomEnemy();
+        Character contender1 = new SampleCharacter(new Weapon(10,10) ,new Armor(10,10),"Steve" );
+        Character contender2 =rand.makeRandomCharacter(rand.getCharacterType());
 
         if(contender1.getSpeed() >= contender2.getSpeed()){
             p1 = contender1;
