@@ -6,6 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for Heji_RPG_fighter" enabled="true">
+        <sourceOutputDir name=".idea/target/generated-sources/annotations" />
+        <sourceTestOutputDir name=".idea/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="Heji_RPG_fighter" />
       </profile>
     </annotationProcessing>
