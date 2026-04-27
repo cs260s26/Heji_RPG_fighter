@@ -68,4 +68,13 @@ public class Character {
     public String getName(){
         return name;
     }
+
+    public void addToInventory(String newItem) {
+        // Adds item if space in inventory
+        for(int i = 0; i < inventory.length; i++)
+            if(inventory[i] == null)
+            {
+                inventory[i] = (newItem);
+            }
+    }
 }
